@@ -19,14 +19,6 @@ res.send("<h2>Welcome to Node JS express app</h2>"+appEnv.url+appEnv.port+port+p
 }).listen(9009);
 console.log(__dirname+"/images/mithunlogo.jpg");
 */
-app.get('/mithuntechnologies', function(request, response) {
-    //response.send("<h2><center>Welcome to Node JS app</h2>");
-    response.write("<h2><center><u>Node JS  Application </u></center></h2>");
-	
-    response.write("<h2><center>Welcome to  Mithun Technologies. Please Contact +91-9980923226 for more information or send an email to devopstrainingblr@gmail.com <center></h2>" );
-    response.end();
-    
-  })
  
 
 //app.get("/html", function(req,res){
@@ -35,6 +27,18 @@ app.get("/html", function(req,res){
     //res.contentType("html") ; 
     res.write("<h2>Welcome</h2>");
     res.write("<h2>/html call</h2>");
+    //must end 
+    res.end();
+    
+    });
+app.get("/deviprasad", function(req,res){
+    res.set("Content-Type","text/html");
+    //res.contentType("html") ; 
+    res.write("<h1>Details:</h1>");
+    res.write("<h2>Devi Prasad</h2>");
+    res.write("<h2>/Role: DevOps Engineer</h2>");
+    res.write("<h2>Experience: 2.7 years</h2>");
+    res.write("<h3>Skills: Linux, Shell Scripting, Git, Github, Maven, Sonarqube, Nexus, Jenkins, AWS, Azure, Terraform, Ansible</h3>");
     //must end 
     res.end();
     
